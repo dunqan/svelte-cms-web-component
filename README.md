@@ -14,7 +14,7 @@ https://sap.github.io/cloud-commerce-spartacus-storefront-docs/customizing-cms-c
 
 `npm install && npm run buid`
 
-## About the examples
+## About the example
 
 Build will result in `svelte-search-box.js`.
     
@@ -22,7 +22,7 @@ Build will result in `svelte-search-box.js`.
 
 1. Copy `svelte-search-box.js` file to assets folder in your shell app
 
-2. Use cms component configration to use those new components:
+2. Use cms component configuration to replace default search box component:
     
     ```typescript
     {
