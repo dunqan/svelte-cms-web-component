@@ -1,4 +1,4 @@
-# React based CMS  web component for Spartacus
+# Svelte based CMS  web component for Spartacus
 
 ## What is Spartacus?
 

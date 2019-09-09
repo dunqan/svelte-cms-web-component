@@ -17,6 +17,7 @@
   });
 
   onDestroy(() => {
+	// This doesn't work currently, take a look at: https://github.com/sveltejs/svelte/issues/1152
     if (subscription) {
       subscription.unsubscribe();
     }
