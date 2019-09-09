@@ -1,69 +1,35 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# React based CMS  web component for Spartacus
 
----
+## What is Spartacus?
 
-# svelte app
+Spartacus is a lean, Angular-based JavaScript storefront for SAP Commerce Cloud that communicates exclusively through the Commerce REST API.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+https://github.com/SAP/cloud-commerce-spartacus-storefront
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+## What are cms components in Spartacus?
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+https://sap.github.io/cloud-commerce-spartacus-storefront-docs/customizing-cms-components/
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+## Build steps
 
+`npm install && npm run buid`
 
-## Get started
+## About the examples
 
-Install the dependencies...
+Build will result in `svelte-search-box.js`.
+    
+## Usage in spartacus
 
-```bash
-cd svelte-app
-npm install
-```
+1. Copy `svelte-search-box.js` file to assets folder in your shell app
 
-...then start [Rollup](https://rollupjs.org):
-
-```bash
-npm run dev
-```
-
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
-
-
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-cd public
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+2. Use cms component configration to use those new components:
+    
+    ```typescript
+    {
+      cmsComponents: {
+        SearchBoxComponent: {
+          component: 'assets/svelte-search-box.js#svelte-search'
+        },
+      }
+    }
+    ```
